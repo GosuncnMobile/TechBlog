@@ -15,4 +15,4 @@
 ### Bug
 # Other
 - [Git常用命令简介](https://github.com/GosuncnMobile/TechBlog/blob/master/Other/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E7%AE%80%E4%BB%8B.md)
-- [视频码流格式解析](https://github.com/GosuncnMobile/TechBlog/tree/master/Other/%E8%A7%86%E9%A2%91%E7%A0%81%E6%B5%81%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90)
+- [视频码流格式解析](https://github.com/GosuncnMobile/TechBlog/blob/master/Other/%E8%A7%86%E9%A2%91%E7%A0%81%E6%B5%81%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90/%E8%A7%86%E9%A2%91%E7%A0%81%E6%B5%81%E6%A0%BC%E5%BC%8F%E8%A7%A3%E6%9E%90.md)
