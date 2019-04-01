@@ -226,10 +226,10 @@ tags:
 
 #### 附带：一个分析布局的工具Layout Inspector
 
-![图片1.png](/img/AndroidstatusBar开发问题汇总/图片1.png)
+![图片1.png](图片1.png)
 
 
-![图片2.png](/img/AndroidstatusBar开发问题汇总/图片2.png)
+![图片2.png](图片2.png)
 
 ** 附录·参考文献 **
 [该使用 fitsSystemWindows 了](http://blog.chengyunfeng.com/?p=905#ixzz52GUtJQnQ)

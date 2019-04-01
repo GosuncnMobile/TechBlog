@@ -10,44 +10,44 @@ tags:
 ### Human Interface Guideline的适配建议
 #### 遵循Safe Area(安全区域)的界定
 您的布局应在填满全屏超视网膜显示屏的同时，保证内容和控件正确显示，且便于点按。遵守安全区域的界定，以确保您的 app 与 iPhone X 新的屏幕比例合作无间。
-![safeArea.jpeg](/img/适配iOS-11相关解决方法/safeArea.jpeg)
+![safeArea.jpeg](safeArea.jpeg)
 iOS 11 废弃了 iOS 7 之后出现的 topLayoutGuide/bottomLayoutGuide，取而代之的是safeLayoutGuide 概念。我们的UI元素都应该布局在这些区域之内，避免被各种 bar（NavgationBar、ToolBar、TabBar、StatusBar）遮挡。
 <!--more-->
-![safeArea1.jpeg](/img/适配iOS-11相关解决方法/safeArea1.jpeg)
-![safeArea2.jpeg](/img/适配iOS-11相关解决方法/safeArea2.jpeg)
+![safeArea1.jpeg](safeArea1.jpeg)
+![safeArea2.jpeg](safeArea2.jpeg)
 如果我们用了 AutoLayout，并且开启了 safeAreaLayoutGuide，布局会自动加上这些 safeLayoutGuide，你的视图不会超出这部分 SafeArea。如图所示，如果你需要增加 Guide 的区域，那幺可以设置 UIViewController.additionalSafeAreaInsets 来增加区域。
 默认的safeAreaLayoutGuide:
-![safeAreaLayoutGuideDefault.jpeg](/img/适配iOS-11相关解决方法/safeAreaLayoutGuideDefault.jpeg)
+![safeAreaLayoutGuideDefault.jpeg](safeAreaLayoutGuideDefault.jpeg)
 UIViewController.additionalSafeAreaInsets = UIEdgeInsetsMake(64, 0, 0, 0);的情况下:
 
-![safeAreaLayoutGuideAddition.jpeg](/img/适配iOS-11相关解决方法/safeAreaLayoutGuideAddition.jpeg)
+![safeAreaLayoutGuideAddition.jpeg](safeAreaLayoutGuideAddition.jpeg)
 
 #### 状态栏
 遵守安全区域的界定，在状态栏下面留出适当的空间。避免为状态栏高度预设值，这可能会导致您的内容被状态栏遮挡或形成错位。不可写死StatusBar的高度,iPhone X是44pt,其余为20pt."如果你的 App 是隐藏 StatusBar 的，建议重新考虑。iPhone X 为用户在垂直空间上提供了更多展示余地，且状态栏中也包含了用户需要知道的信息，除非能通过隐藏状态栏带给用户额外的价值，否则苹果建议大家将状态栏还给用户。"
 另外还有一点，用户在使用 iPhone X 打电话的时候，StatusBar 的高度也不会发生变化了。
-![statusBar.png](/img/适配iOS-11相关解决方法/statusBar.png)
+![statusBar.png](statusBar.png)
 
 #### 圆弧展示角和传感器槽
 您的 app 的内容元素和控制按键应避开屏幕角落和传感器槽，让其在填满屏幕的同时不被角落切割。
-![BarConrner.png](/img/适配iOS-11相关解决方法/BarConrner.png)
+![BarConrner.png](BarConrner.png)
 
 #### 主屏幕指示器
 为使 app 的内容和控件始终保持清晰可见且便于点按，请确保您的 app 不会干扰主屏幕指示器。这部分的高度是34pt。
-![homeIdi.png](/img/适配iOS-11相关解决方法/homeIdi.png)
-![homeIndicator.jpeg](/img/适配iOS-11相关解决方法/homeIndicator.jpeg)
+![homeIdi.png](homeIdi.png)
+![homeIndicator.jpeg](homeIndicator.jpeg)
 
 #### 调整视频的缩放度
 Phone X 上的视频内容应填满屏幕。但是，如果这导致顶部或底部被切割，或侧面裁剪太多，则应将视频拉伸或缩小以配合屏幕。当 AVPlayerViewController 自动管理时，基于 AVPlayerLayer 的自定义视频播放器需要选择适当的初始视频重力设置，并允许用户根据自己的喜好在 aspect (固定宽高比) 和 aspectFill (固定宽高比且全屏) 观看模式之间进行切换。
 >更多详细信息:[Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/overview/iphone-x/)
 
-![videoScale.png](/img/适配iOS-11相关解决方法/videoScale.png)
+![videoScale.png](videoScale.png)
 
 #### 各个机型尺寸变化
-![手机尺寸区别.png](/img/适配iOS-11相关解决方法/手机尺寸区别.png)
+![手机尺寸区别.png](手机尺寸区别.png)
 下图是 iPhone X 对比其他机型的变化部分。iPhone X 和 iPhone 8 的宽度一致，在垂直方向上多了145pt，这就意味着首页可以展示更多的内容.
-![iponeX.jpeg](/img/适配iOS-11相关解决方法/iponeX.jpeg)
+![iponeX.jpeg](iponeX.jpeg)
 iPhone X 的坐标系统以及能显示内容的区域如下图所示：
-![显示区域.jpeg](/img/适配iOS-11相关解决方法/显示区域.jpeg)
+![显示区域.jpeg](显示区域.jpeg)
 
 ### 消除iPhone X展示界面的上下黑边
 设置LaunchImage中对iPhone X的启动页图,或者设置LaunchScreen.storyboard
@@ -148,9 +148,9 @@ iOS 11对整一个NavigationBar视图的层级进行了修改,原本设置backBu
 [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[[UIImage imageNamed:@"navi_back"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 30, 0, 0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
 ```
 会出现两个返回按钮,如图:
-![iOS11BackButtonOlder.jpeg](/img/适配iOS-11相关解决方法/iOS11BackButtonOlder.jpeg)
+![iOS11BackButtonOlder.jpeg](iOS11BackButtonOlder.jpeg)
 相对应的视图层级:
-![iOS11BackButtonOlderDetail.jpeg](/img/适配iOS-11相关解决方法/iOS11BackButtonOlderDetail.jpeg)
+![iOS11BackButtonOlderDetail.jpeg](iOS11BackButtonOlderDetail.jpeg)
 因此采用另外一种方式去设置backButton的图片:
 ```objectivec
 UIImage *backImage = [UIImage imageNamed:@"navi_back"];
@@ -158,9 +158,9 @@ UIImage *backImage = [UIImage imageNamed:@"navi_back"];
     [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:backImage];
 ```
 iOS 10下的视图层级:
-![iOS10BackButtonCurrent.jpeg](/img/适配iOS-11相关解决方法/iOS10BackButtonCurrent.jpeg)
+![iOS10BackButtonCurrent.jpeg](iOS10BackButtonCurrent.jpeg)
 iOS 11下的视图层级:
-![iOS11BackButtonCurrent.jpeg](/img/适配iOS-11相关解决方法/iOS11BackButtonCurrent.jpeg)
+![iOS11BackButtonCurrent.jpeg](iOS11BackButtonCurrent.jpeg)
 ### 去除BackTitle的方法
 设置BackTitle的偏移量,根据是否iOS 11分别给一个偏移量.
 ```objectivec
@@ -173,13 +173,13 @@ iOS 11下的视图层级:
 ### rightBarButtonItem设置
 因为在iOS11中leftBarButtonItems以及rightBarButtonItems的视图层级进行了更改,所有的BarItem都会放在UIButtonBarStackView里面.UIButtonBarStackView是一个相对布局.会根据item的个数自动设置各个Item间的距离以及约束.用`initWithCustomView:`生成的UIBarButtonItem在没加约束的情况下会在屏幕上错位,或者第一次能出现,当第二次视图出现时就消失,在iOS 11以下为正常.分析下视图层级发现,当不加约束的情况下,系统会给contentView外层添加一个UITAMICAdaptorView作为适配器.而加了约束之后,contentView外层便只是UIButtonBarStackView.如图.
 `iOS11 BarButton的contentView不添加约束的情况下的视图层级:`
-![iOS11ItemNoConstant.jpeg](/img/适配iOS-11相关解决方法/iOS11ItemNoConstant.jpeg)
+![iOS11ItemNoConstant.jpeg](iOS11ItemNoConstant.jpeg)
 
 `iOS11 BarButton的contentView添加约束的情况下的视图层级:`
-![iOS11ItemConstant.jpeg](/img/适配iOS-11相关解决方法/iOS11ItemConstant.jpeg)
+![iOS11ItemConstant.jpeg](iOS11ItemConstant.jpeg)
 
 `iOS11 之前BarButton的contentView不添加约束的情况下的视图层级:`
-![iOS10ItemNoConstant.jpeg](/img/适配iOS-11相关解决方法/iOS10ItemNoConstant.jpeg)
+![iOS10ItemNoConstant.jpeg](iOS10ItemNoConstant.jpeg)
 因此,解决方法在iOS 11下为给contentView添加约束,若一个items里面有多个item用contentView生成的话,也是同理分别设置约束.代码如下:
 ```objectivec
 	_dropdownMenu = [[MKDropdownMenu alloc] initWithFrame:CGRectMake(0, 0, 100, 44)];
@@ -196,21 +196,21 @@ iOS 11下的视图层级:
 SafeArea最低适配到iOS9,但项目要求最低适配到iOS8.因此可以先使用topLayoutGuide和BottomLayoutGuide代替.
 ### 横屏时tableview的适配
 * 先看几个在iPhone X上适配错误的例子
-![tableViewEroor1.gif](/img/适配iOS-11相关解决方法/tableViewEroor1.gif)
+![tableViewEroor1.gif](tableViewEroor1.gif)
 
-![tableViewError2.gif](/img/适配iOS-11相关解决方法/tableViewError2.gif)
+![tableViewError2.gif](tableViewError2.gif)
 
 * 头部导航栏不予许进行用户交互的，意味着上面这两种情况 Apple 官方是不允许的
 * 使用官方推荐的safe Area在大多数情况下可以解决问题,但在横屏情况下还需要额外进行适配.
 
-![tableViewLandError.png](/img/适配iOS-11相关解决方法/tableViewLandError.png)
+![tableViewLandError.png](tableViewLandError.png)
 * 产生这个原因代码是：`[headerView.contentView setBackgroundColor:[UIColor headerFooterColor]]，`这个写法看起来没错，但是只有在 iPhone X上有问题
 * 原因:
 
-![tableViewLandDetail.png](/img/适配iOS-11相关解决方法/tableViewLandDetail.png)
+![tableViewLandDetail.png](tableViewLandDetail.png)
 * 解决方法：设置backgroundView颜色 `[headerView.backgroundView setBackgroundColor:[UIColor headerFooterColor]]`
 
-![ios11tableViewLandRight.jpeg](/img/适配iOS-11相关解决方法/ios11tableViewLandRight.jpeg)
+![ios11tableViewLandRight.jpeg](ios11tableViewLandRight.jpeg)
 
 ### 隐藏底部Indicator
 如果业务需求需要隐藏底部Indicator(apple官方不推荐隐藏)
