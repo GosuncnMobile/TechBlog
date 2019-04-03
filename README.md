@@ -10,6 +10,7 @@
 # iOS
 ### 规范
 - [第三方库](https://github.com/GosuncnMobile/TechBlog/blob/master/iOS/%20standard/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93.md)
+- [Cocoapod私有库](https://github.com/GosuncnMobile/TechBlog/blob/master/iOS/%20standard/Cocoapod%E7%A7%81%E6%9C%89%E5%BA%93.md)
 ### 总结
 - [GXXVideoPlayer配置](https://github.com/GosuncnMobile/TechBlog/blob/master/iOS/%20summary/GXXVideoPlayer%E9%85%8D%E7%BD%AE/GXXVideoPlayer%E9%85%8D%E7%BD%AE.md)
 #### 系统版本适配
