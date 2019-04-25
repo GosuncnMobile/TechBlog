@@ -59,8 +59,9 @@ pod lib lint
 
 ## Git
 在github上新建一个Repository,然后把整个lib推到远程库上.注意.podspec文件要在根目录地址
+删除.gitignore最后一行Pods/前的#,即不上传ods/
 ```sh
-git remote https://github.com/GosuncnMobile/GSSwiftKit.git
+git remote add origin https://github.com/GosuncnMobile/GSSwiftKit.git
 git pull
 git add.
 git commit -a -m ""
@@ -74,3 +75,6 @@ pod 'GSSwiftKit', :git => 'https://github.com/GosuncnMobile/GSSwiftKit.git'
 #### 版本管理
 
 ## SVN
+
+## 参考连接
+[cocoapod搭建私有库超级详细教程](https://www.jianshu.com/p/9992feb8b00b)
