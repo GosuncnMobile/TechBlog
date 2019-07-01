@@ -1,7 +1,7 @@
 
 
 ## UUID证书打包
-注意这个在Developererbsu zai Connetc li 
+注意这个在Developerer里,不在connect里 
 ![](addUUID.jpg)
 
 ## TestFight 内部测试
