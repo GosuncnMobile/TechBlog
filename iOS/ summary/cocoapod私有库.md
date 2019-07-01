@@ -75,6 +75,9 @@ pod 'GSSwiftKit', :git => 'https://github.com/GosuncnMobile/GSSwiftKit.git'
 #### 版本管理
 
 ## SVN
-
+先要设置全局的SVN用户名和密码
+```shell
+svn export --non-interactive --trust-server-cert --force --username USERNAME --password PASAWORD http://svnpath/projectName/ DEST_FOLDER
+```
 ## 参考连接
 [cocoapod搭建私有库超级详细教程](https://www.jianshu.com/p/9992feb8b00b)
