@@ -72,12 +72,27 @@ git push origin master
 pod 'GSSwiftKit', :git => 'https://github.com/GosuncnMobile/GSSwiftKit.git'
 ```
 这样的pod是没有版本管理的,类似于快照版本
+
 #### 版本管理
+先修改podspec的版本号
+```sh
+git tag 0.1.0
+git push --tags
+```
+这样就可以通过
+```ruby
+pod 'GSSwiftKit', :git => 'https://github.com/GosuncnMobile/GSSwiftKit.git', :tag => '0.1.0'
+```
+开获取对应版本
 
 ## SVN
 先要设置全局的SVN用户名和密码
 ```shell
 svn export --non-interactive --trust-server-cert --force --username USERNAME --password PASAWORD http://svnpath/projectName/ DEST_FOLDER
+```
+由于SVNtag管理比较麻烦,可以直接在SVN地址后面加入Tag就行了
+```ruby
+pod 'GSNetWork', :svn =>'http://192.168.0.0:0/svn/GSSwiftKit/tags/0.1.0 '
 ```
 ## 参考连接
 [cocoapod搭建私有库超级详细教程](https://www.jianshu.com/p/9992feb8b00b)
