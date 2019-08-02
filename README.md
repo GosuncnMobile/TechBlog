@@ -13,7 +13,7 @@
 - [第三方库](https://github.com/GosuncnMobile/TechBlog/blob/master/iOS/%20standard/%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93.md)
 - [Cocoapod私有库](https://github.com/GosuncnMobile/TechBlog/blob/master/iOS/%20summary/cocoapod%E7%A7%81%E6%9C%89%E5%BA%93.md)
 ### 总结
-- [GXXVideoPlayer配置](https://github.com/GosuncnMobile/TechBlog/blob/master/iOS/%20summary/GXXVideoPlayer%E9%85%8D%E7%BD%AE/GXXVideoPlayer%E9%85%8D%E7%BD%AE.md)
+
 - [iOS测试方案](https://github.com/GosuncnMobile/TechBlog/blob/master/iOS/%20summary/iOS%E6%B5%8B%E8%AF%95%E6%96%B9%E6%A1%88/iOS%E6%B5%8B%E8%AF%95%E6%96%B9%E6%A1%88.md)
 #### 系统版本适配
 - [iOS 11](https://github.com/GosuncnMobile/TechBlog/blob/master/iOS/%20summary/%E9%80%82%E9%85%8DiOS-11%E6%80%BB%E7%BB%93/%E9%80%82%E9%85%8DiOS-11%E6%80%BB%E7%BB%93.md)
