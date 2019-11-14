@@ -27,6 +27,8 @@ Running pod install on your new library.
 打开默认生产的.podspec里面直白明了按着填就是了.就写几个要注意的点
 - dependency Lib的依赖库,多个另起一行.
 - **注意** 如果你的库不需要依赖这个库,但是你的Example需要依赖它(例:需要SnapKit来编写Example界面,库本身不涉及SnapKit).那这个依赖写在Example/Podfile里
+- **注意** 如果dependency是另外一个私有库,则应该在podspec写私有库的名字和版本号,在引用项目的Podfile里写私有库的引用地址
+- **注意** podspace的 s.source 地址要正确,不然无法获得正确的版本号
 ```ruby
 Pod::Spec.new do |s|
     s.dependency 'Moya', '~> 12.0'
@@ -83,7 +85,7 @@ git push --tags
 ```ruby
 pod 'GSSwiftKit', :git => 'https://github.com/GosuncnMobile/GSSwiftKit.git', :tag => '0.1.0'
 ```
-开获取对应版本
+
 
 ## SVN
 先要设置全局的SVN用户名和密码
@@ -96,3 +98,7 @@ pod 'GSNetWork', :svn =>'http://192.168.0.0:0/svn/GSSwiftKit/tags/0.1.0 '
 ```
 ## 参考连接
 [cocoapod搭建私有库超级详细教程](https://www.jianshu.com/p/9992feb8b00b)
+
+svn export --non-interactive --trust-server-cert --force --username linzhengyi --password 123456 http://192.168.25.105:28080/svn/iot/trunk/ DEST_FOLDER
+
+http://192.168.25.105:28080/svn/iot/trunk
