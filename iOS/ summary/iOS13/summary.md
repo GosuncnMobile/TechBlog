@@ -9,7 +9,7 @@ UIWebView已经全面废弃.全部升级成WKWebView吧!
 **xcode11,不加权限iOS13直接卡死**
 
 ### [UniversalLink](https://developer.apple.com/library/archive/documentation/General/Conceptual/AppSearch/UniversalLinks.html)
-虽然Apple明确完全禁止URL Schema,但是按苹果目前态度,Universal Link必然是大趋势.而且不少第三方SDK(微信,QQ互联等)要支持UniversalLink校验才能跳转.
+虽然Apple尚未明确完全禁止URL Schema,但是按苹果目前态度,Universal Link必然是大趋势.而且不少第三方SDK(微信,QQ互联等)要支持UniversalLink校验才能跳转.
 #### 配置流程
 - 新建apple-app-site-association文件(无后缀),内容如下
 ```json
